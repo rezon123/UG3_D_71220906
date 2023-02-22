@@ -1,0 +1,11 @@
+try:
+    npl = input("Masukkan Plat Nomor : ") #npl artinya nomorplat 
+    plat = int(npl.split()[1])
+    if plat >= 0 and plat <= 3000:
+        print("Plat nomor tersebut diperuntukan untuk mobil")
+    elif plat >= 3001 and plat <= 4000:
+        print("Plat nomor tersebut diperuntukkan untuk motor")
+    elif plat >= 4001 and plat <= 5000:
+        print("Plat nomor tersebut diperuntukkan untuk angkutan umum ")
+except (ValueError,IndexError) : 
+    print("Plat Nomor Tidak Teridentifikasi, setelah kode daerah harus berupa nomor kendaraan")
